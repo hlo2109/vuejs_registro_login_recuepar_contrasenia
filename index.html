@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="divlogin">
+        <div class="container">
+            <div class="divcont">
+                <h3>{{ title }}</h3>
+                <form @submit.prevent="sendForm()">
+                    <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
+                    <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password" >
+                    <input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos" >
+                    <button>Iniciar sesión</button>
+                    <a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
+                    <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
+                    <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
+                </form>
+            </div>            
+        </div>
+    </div>
+    <script src="assets/js/vue.min.js"></script>
+    <script src="assets/js/registro.js"></script>
+</body>
+</html>
