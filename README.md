@@ -2,4 +2,4 @@
 Maquetación de registro login y recuperar contraseña
 
 ### vista previa
-http://hlo21.com/b/ODA=
+https://hlo2109.github.io/vuejs_registro_login_recuepar_contrasenia/
